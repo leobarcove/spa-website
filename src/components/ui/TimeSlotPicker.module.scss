@@ -1,0 +1,358 @@
+@import '@/styles/mixins';
+
+.timeSlotPicker {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  
+  @include mobile-only {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}
+
+.title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Empty State
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-3);
+  color: var(--color-text-tertiary);
+}
+
+// Period Filter
+.periodFilter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  
+  @include mobile-only {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}
+
+.periodBtn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+  
+  &:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  &.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    
+    .periodTime {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+.periodLabel {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.periodTime {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+// Slots Container
+.slotsContainer {
+  margin-bottom: var(--space-6);
+}
+
+.slotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-3);
+  
+  @include mobile-only {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-2);
+  }
+}
+
+.timeSlot {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &:hover:not(:disabled) {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  
+  &.selected {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    
+    .slotStatus .availability {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  
+  &.almostFull {
+    border-color: var(--color-secondary);
+    background: rgba(201, 169, 97, 0.05);
+    
+    &:hover {
+      border-color: var(--color-secondary-dark);
+    }
+  }
+  
+  &.unavailable {
+    background: var(--color-neutral-50);
+    border-color: var(--color-border-light);
+    color: var(--color-text-tertiary);
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--color-border-light);
+    }
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.slotTime {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.slotStatus {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+}
+
+.selectedIcon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--color-secondary);
+  border-radius: var(--radius-full);
+  padding: 2px;
+}
+
+.availability {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.unavailableText {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+}
+
+// No Slots State
+.noSlots {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  color: var(--color-text-secondary);
+  
+  p {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-1);
+  }
+  
+  span {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+  }
+}
+
+// Legend
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-neutral-50);
+  border-radius: var(--radius-lg);
+  
+  @include mobile-only {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 2px solid;
+  
+  &.available {
+    background: var(--color-surface);
+    border-color: var(--color-border-light);
+  }
+  
+  &.almostFull {
+    background: rgba(201, 169, 97, 0.1);
+    border-color: var(--color-secondary);
+  }
+  
+  &.unavailable {
+    background: var(--color-neutral-50);
+    border-color: var(--color-border-light);
+  }
+}
+
+// Responsive adjustments
+@include mobile-only {
+  .timeSlot {
+    padding: var(--space-2);
+    min-height: 70px;
+  }
+  
+  .slotTime {
+    font-size: var(--text-sm);
+  }
+  
+  .availability,
+  .unavailableText {
+    font-size: 10px;
+  }
+}
+
+// Accessibility
+@media (prefers-reduced-motion: reduce) {
+  .timeSlot {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  .timeSlot {
+    border-width: 3px;
+    
+    &.selected {
+      border-color: white;
+    }
+    
+    &.unavailable {
+      background: #f0f0f0;
+    }
+  }
+  
+  .legendDot {
+    border-width: 3px;
+  }
+}
+
+// Loading state (for future API integration)
+.loading {
+  .slotsGrid {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+// Animation for slot appearance
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeSlot {
+  animation: slideIn 0.2s ease-out;
+}
+
+// Stagger animation for grid
+.slotsGrid .timeSlot {
+  animation-delay: calc(var(--animation-order, 0) * 0.05s);
+}

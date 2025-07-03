@@ -1,0 +1,50 @@
+import Header from '@/components/Header/Header'
+import ContactSection from '@/components/Contact/ContactSection'
+import Footer from '@/components/Footer/Footer'
+
+export const metadata = {
+  title: 'Contact Us | Serenity Spa Malaysia | Location & Booking Info',
+  description: 'Contact Serenity Spa Malaysia in Kuala Lumpur. Find our location, business hours, phone number, and booking information. Visit our luxury wellness sanctuary today.',
+  keywords: 'contact spa Malaysia, spa location KL, Bukit Bintang spa, spa phone number, spa address Malaysia, spa business hours',
+  openGraph: {
+    title: 'Contact Us | Serenity Spa Malaysia | Location & Booking Info',
+    description: 'Contact Serenity Spa Malaysia in Kuala Lumpur. Find our location, business hours, phone number, and booking information.',
+    url: 'https://serenityspa.my/contact',
+    siteName: 'Serenity Spa Malaysia',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Serenity Spa Malaysia - Location & Info',
+      },
+    ],
+    locale: 'en_MY',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us | Serenity Spa Malaysia | Location & Booking Info',
+    description: 'Contact Serenity Spa Malaysia in Kuala Lumpur. Find our location, business hours, phone number, and booking information.',
+    images: ['https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80'],
+  },
+  alternates: {
+    canonical: 'https://serenityspa.my/contact',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+export default function ContactPage() {
+  return (
+    <main>
+      <Header />
+      <div style={{ paddingTop: '120px' }}>
+        <ContactSection />
+      </div>
+      <Footer />
+    </main>
+  )
+}

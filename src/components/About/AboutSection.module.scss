@@ -1,0 +1,245 @@
+@import '@/styles/mixins';
+
+.about {
+  padding: var(--space-12) 0;
+  background-color: var(--color-surface);
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-3);
+  color: var(--color-primary);
+  font-weight: 400;
+  
+  @include tablet-up {
+    font-size: var(--text-4xl);
+  }
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  
+  @include tablet-up {
+    font-size: var(--text-lg);
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  margin-bottom: var(--space-12);
+  
+  @include desktop-up {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  
+  @include desktop-up {
+    order: 2;
+  }
+}
+
+.aboutImage {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  
+  :global(img) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.imageBadge {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  background: var(--color-surface);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  
+  h4 {
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--space-1);
+    font-weight: 500;
+  }
+  
+  p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+}
+
+.textContent {
+  @include desktop-up {
+    order: 1;
+  }
+}
+
+.sectionTitle {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+  font-weight: 400;
+  
+  @include tablet-up {
+    font-size: var(--text-3xl);
+  }
+}
+
+.description {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  
+  @include tablet-up {
+    font-size: var(--text-lg);
+  }
+}
+
+.mission {
+  background: var(--color-neutral-50);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-secondary);
+  margin-bottom: var(--space-6);
+  
+  h3 {
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-3);
+    font-weight: 500;
+  }
+  
+  p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  
+  @include tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.featureIcon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.featureContent {
+  h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+  }
+  
+  p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-neutral-50), var(--color-surface));
+  padding: var(--space-10) var(--space-6);
+  border-radius: var(--radius-2xl);
+  
+  h3 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-3);
+    color: var(--color-text-primary);
+    font-weight: 400;
+    
+    @include tablet-up {
+      font-size: var(--text-3xl);
+    }
+  }
+  
+  p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto var(--space-6);
+    line-height: 1.6;
+    
+    @include tablet-up {
+      font-size: var(--text-lg);
+    }
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  
+  @include tablet-up {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.primaryBtn {
+  @include button-primary;
+}
+
+.secondaryBtn {
+  @include button-secondary;
+}
+

@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /services
+Allow: /about
+Allow: /contact
+Allow: /booking
+
+# Sitemap location
+Sitemap: https://serenityspa.my/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

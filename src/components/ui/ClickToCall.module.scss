@@ -1,0 +1,37 @@
+@import '@/styles/mixins';
+
+.callButton {
+  @include button-primary;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  @include mobile-only {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.callLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-base);
+  
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

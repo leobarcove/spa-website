@@ -1,0 +1,242 @@
+@import '@/styles/mixins';
+
+.ambientAudio {
+  position: fixed;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  z-index: 99999;
+  max-width: 300px;
+  pointer-events: auto;
+}
+
+.controls {
+  background: rgba(26, 46, 26, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  pointer-events: auto;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.controlBtn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(201, 169, 97, 0.2);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+
+  &:hover:not(:disabled) {
+    background: var(--color-secondary);
+    color: var(--color-primary-dark);
+    transform: scale(1.05);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #FFFFFF;
+  }
+
+  &:hover:not(:disabled) svg {
+    color: var(--color-primary-dark);
+  }
+}
+
+.playBtn {
+  background: var(--color-secondary);
+  pointer-events: auto;
+  
+  svg {
+    color: var(--color-primary-dark);
+    pointer-events: none;
+  }
+  
+  &:hover:not(:disabled) {
+    background: var(--color-secondary-light);
+  }
+}
+
+.volumeControl {
+  flex: 1;
+  margin-left: var(--space-2);
+}
+
+.volumeSlider {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  outline: none;
+  cursor: pointer;
+  
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+  
+  &::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &::-webkit-slider-thumb {
+      cursor: not-allowed;
+    }
+    
+    &::-moz-range-thumb {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.interactionPrompt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(26, 46, 26, 0.9);
+  color: white;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(10px);
+  animation: fadeInOut 3s ease-in-out;
+
+  p {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+// Mobile responsiveness
+@include mobile-only {
+  .ambientAudio {
+    bottom: var(--space-3);
+    left: var(--space-3);
+    right: var(--space-3);
+    max-width: none;
+  }
+
+  .controls {
+    padding: var(--space-2);
+  }
+
+  .title {
+    font-size: var(--text-xs);
+  }
+
+  .controlBtn {
+    width: 28px;
+    height: 28px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+// Hide when controls are not needed
+.ambientAudio:not(:hover) .controls {
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+}
+
+.ambientAudio:hover .controls {
+  opacity: 1;
+}
+
+// Accessibility
+@media (prefers-reduced-motion: reduce) {
+  .controlBtn:hover {
+    transform: none;
+  }
+  
+  .interactionPrompt {
+    animation: none;
+  }
+}
+
+// Focus styles
+.controlBtn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.volumeSlider:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

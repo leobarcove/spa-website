@@ -1,0 +1,35 @@
+{
+  "name": "Serenity Spa Malaysia - Luxury Wellness & Beauty Treatments",
+  "short_name": "Serenity Spa",
+  "description": "Malaysia's premier luxury spa offering traditional healing treatments, aromatherapy, and wellness services in Kuala Lumpur.",
+  "theme_color": "#1a2e1a",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "categories": ["health", "wellness", "spa", "beauty", "lifestyle"],
+  "lang": "en-MY",
+  "icons": [],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "description": "Book your spa appointment online",
+      "url": "/booking"
+    },
+    {
+      "name": "View Services",
+      "short_name": "Services",
+      "description": "Browse our spa services",
+      "url": "/services"
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact"
+    }
+  ],
+  "screenshots": []
+}

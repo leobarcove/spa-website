@@ -1,0 +1,262 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Testing
+/coverage
+/.nyc_output
+
+# Next.js build output
+/.next/
+/out/
+.next
+out
+
+# Production
+/build
+/dist
+
+# Misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# PWA files
+**/public/service-worker.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js
+**/public/fallback-*.js
+**/public/precache.*.*.js
+**/public/precache-manifest.*.js
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IDE - IntelliJ IDEA
+.idea
+*.iml
+*.iws
+*.ipr
+
+# IDE - Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# IDE - Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+tags
+[._]*.un~
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+tmp/
+temp/
+
+# Lock files (keep package-lock.json)
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Test files
+*.test.js.snap
+*.spec.js.snap
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Cache directories
+.cache
+.parcel-cache
+.sass-cache
+
+# Build directories
+dist/
+build/
+.turbo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Compiled binary addons
+build/Release
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.pfx
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Uploaded files (if stored locally)
+/uploads
+/public/uploads
+
+# Generated files
+/generated
+
+# Sitemap (generated dynamically)
+/public/sitemap.xml
+/public/sitemap-*.xml
+
+# RSS feeds
+/public/rss.xml
+/public/feed.xml
+
+# Screenshots and local media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.jpeg
+!public/**/*.gif
+!public/**/*.mp4
+!public/**/*.webm
+!src/**/*.png
+!src/**/*.jpg
+!src/**/*.jpeg
+!src/**/*.gif
+
+# Storybook
+storybook-static/
+.storybook/build/
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Cypress
+cypress/videos
+cypress/screenshots
+cypress/downloads
+
+# Documentation build
+/docs/.vitepress/dist
+/docs/.vitepress/cache
+
+# Sentry
+.sentryclirc
+
+# Bundle analyzer
+/analyze
+
+# Performance profiling
+*.cpuprofile
+*.heapsnapshot
+
+# Local development files
+.env.local.backup
+TODO.local.md
+NOTES.md
+NOTES.local.md
+scratch.*
