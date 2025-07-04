@@ -33,7 +33,7 @@ export const metadata = {
     title: 'Sharon Spa | Luxury Wellness & Traditional Healing in Penang',
     description:
       "Experience Penang's premier luxury spa with traditional healing treatments, aromatherapy, and wellness services in the UNESCO Heritage zone of Georgetown.",
-    images: ['https://sharon-spa.comages/hero/hero-main.jpg'],
+    images: ['https://sharon-spa.com/images/hero/hero-main.jpg'],
   },
   alternates: {
     canonical: 'https://sharon-spa.com',
