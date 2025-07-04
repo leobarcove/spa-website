@@ -15,9 +15,17 @@ export default function Calendar({ selectedDate, onDateSelect, minDate, maxDate 
   const [currentMonth, setCurrentMonth] = useState(new Date())
   
   const today = new Date()
-  const selectedDateObj = selectedDate ? new Date(selectedDate) : null
-  const minDateObj = minDate ? new Date(minDate) : today
-  const maxDateObj = maxDate ? new Date(maxDate) : new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
+  today.setHours(0, 0, 0, 0) // Reset time to midnight
+  
+  // Parse dates properly to avoid timezone issues
+  const parseDate = (dateStr: string) => {
+    const [year, month, day] = dateStr.split('-').map(Number)
+    return new Date(year, month - 1, day)
+  }
+  
+  const selectedDateObj = selectedDate ? parseDate(selectedDate) : null
+  const minDateObj = minDate ? parseDate(minDate) : today
+  const maxDateObj = maxDate ? parseDate(maxDate) : new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
 
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -35,22 +43,33 @@ export default function Calendar({ selectedDate, onDateSelect, minDate, maxDate 
   }
 
   const isDateDisabled = (date: Date) => {
-    return date < minDateObj || date > maxDateObj
+    const dateOnly = new Date(date.getFullYear(), date.getMonth(), date.getDate())
+    const minOnly = new Date(minDateObj.getFullYear(), minDateObj.getMonth(), minDateObj.getDate())
+    const maxOnly = new Date(maxDateObj.getFullYear(), maxDateObj.getMonth(), maxDateObj.getDate())
+    return dateOnly < minOnly || dateOnly > maxOnly
   }
 
   const isDateSelected = (date: Date) => {
     if (!selectedDateObj) return false
-    return date.toDateString() === selectedDateObj.toDateString()
+    return date.getFullYear() === selectedDateObj.getFullYear() &&
+           date.getMonth() === selectedDateObj.getMonth() &&
+           date.getDate() === selectedDateObj.getDate()
   }
 
   const isToday = (date: Date) => {
-    return date.toDateString() === today.toDateString()
+    return date.getFullYear() === today.getFullYear() &&
+           date.getMonth() === today.getMonth() &&
+           date.getDate() === today.getDate()
   }
 
   const handleDateClick = (day: number) => {
     const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day)
     if (!isDateDisabled(date)) {
-      onDateSelect(date.toISOString().split('T')[0])
+      // Format date as YYYY-MM-DD in local timezone
+      const year = date.getFullYear()
+      const month = String(date.getMonth() + 1).padStart(2, '0')
+      const dayStr = String(day).padStart(2, '0')
+      onDateSelect(`${year}-${month}-${dayStr}`)
     }
   }
 

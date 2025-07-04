@@ -3,20 +3,23 @@ import AboutSection from '@/components/About/AboutSection'
 import Footer from '@/components/Footer/Footer'
 
 export const metadata = {
-  title: 'About Us | Serenity Spa Malaysia | Traditional Wellness Sanctuary',
-  description: 'Learn about Serenity Spa Malaysia, Kuala Lumpur\'s premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing and modern luxury.',
-  keywords: 'about serenity spa, spa philosophy Malaysia, wellness sanctuary KL, traditional healing, spa story, luxury spa experience',
+  title: 'About Us | Sharon Spa | Traditional Wellness Sanctuary',
+  description:
+    "Learn about Sharon Spa, Georgetown Penang's premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing and modern luxury.",
+  keywords:
+    'about sharon spa, spa philosophy Penang, wellness sanctuary Georgetown, traditional healing, spa story, luxury spa experience',
   openGraph: {
-    title: 'About Us | Serenity Spa Malaysia | Traditional Wellness Sanctuary',
-    description: 'Learn about Serenity Spa Malaysia, Kuala Lumpur\'s premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing.',
-    url: 'https://serenityspa.my/about',
-    siteName: 'Serenity Spa Malaysia',
+    title: 'About Us | Sharon Spa | Traditional Wellness Sanctuary',
+    description:
+      "Learn about Sharon Spa, Georgetown Penang's premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing.",
+    url: 'https://sharonspa.my/about',
+    siteName: 'Sharon Spa',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
         width: 1200,
         height: 630,
-        alt: 'About Serenity Spa Malaysia - Our Story',
+        alt: 'About Sharon Spa - Our Story',
       },
     ],
     locale: 'en_MY',
@@ -24,12 +27,15 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us | Serenity Spa Malaysia | Traditional Wellness Sanctuary',
-    description: 'Learn about Serenity Spa Malaysia, Kuala Lumpur\'s premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing.',
-    images: ['https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80'],
+    title: 'About Us | Sharon Spa | Traditional Wellness Sanctuary',
+    description:
+      "Learn about Sharon Spa, Georgetown Penang's premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing.",
+    images: [
+      'https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
+    ],
   },
   alternates: {
-    canonical: 'https://serenityspa.my/about',
+    canonical: 'https://sharonspa.my/about',
   },
   robots: {
     index: true,

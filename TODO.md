@@ -9,7 +9,7 @@ Development of a luxury spa website using Next.js 14.2.x with App Router, CSS Mo
 
 ### Domain and DNS Configuration
 - [ ] Configure domain and DNS settings
-  - Purchase/verify domain ownership (serenityspa.my)
+  - Purchase/verify domain ownership (sharonspa.my)
   - Update DNS records to point to hosting provider
   - Configure www and non-www redirects
   - Verify SSL certificate is active
@@ -127,7 +127,7 @@ Once domain is connected:
 
 ### Environment Variables Needed:
 ```env
-NEXT_PUBLIC_SITE_URL=https://serenityspa.my
+NEXT_PUBLIC_SITE_URL=https://sharonspa.my
 
 # Email service credentials (choose one):
 SENDGRID_API_KEY=...

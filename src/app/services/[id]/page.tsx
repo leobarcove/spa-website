@@ -85,7 +85,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     duration: '120 minutes',
     description: 'Immersive aromatherapy experience combining essential oils, massage, and wellness rituals.',
     longDescription: 'Embark on a transformative wellness journey that engages all your senses through the power of aromatherapy. This comprehensive treatment combines carefully selected essential oils with therapeutic massage techniques, breathing exercises, and mindfulness practices. Each session is customized based on your individual needs and desired outcomes.',
-    image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     benefits: [
       'Balances emotions and mood',
       'Reduces anxiety and stress',
@@ -189,7 +189,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
 
 // Add more services as needed
 const additionalServices = {
-  '4': { ...serviceDetails['1'], id: '4', title: 'Hot Stone Therapy', price: 'RM 200' },
+  '4': { ...serviceDetails['1'], id: '4', title: 'Hot Stone Therapy', price: 'RM 200', duration: '90 minutes', image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
   '5': { ...serviceDetails['1'], id: '5', title: 'Deep Tissue Massage', price: 'RM 190' },
   '6': { ...serviceDetails['1'], id: '6', title: 'Couples Massage', price: 'RM 360' },
   '7': { ...serviceDetails['2'], id: '7', title: 'Essential Oil Massage', price: 'RM 170' },
@@ -257,9 +257,6 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
               <Link href="/booking" className={styles.primaryBtn}>
                 Book This Treatment
               </Link>
-              <button className={styles.secondaryBtn}>
-                Call to Inquire
-              </button>
             </div>
           </div>
         </div>

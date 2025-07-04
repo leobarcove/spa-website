@@ -192,13 +192,13 @@ export default function TimeSlotPicker({
                 disabled={!slot.available}
                 title={getAvailabilityText(slot)}
               >
+                {selectedTime === slot.time && slot.available && (
+                  <BiCheck className={styles.selectedIcon} />
+                )}
                 <div className={styles.slotTime}>
                   {formatTimeDisplay(slot.time)}
                 </div>
                 <div className={styles.slotStatus}>
-                  {selectedTime === slot.time && slot.available && (
-                    <BiCheck className={styles.selectedIcon} />
-                  )}
                   {slot.available ? (
                     <span className={styles.availability}>
                       {getAvailabilityText(slot)}

@@ -3,7 +3,12 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { GiLeafSwirl, GiLotusFlower, GiBodyBalance, GiBamboo } from 'react-icons/gi'
+import {
+  GiLeafSwirl,
+  GiLotusFlower,
+  GiBodyBalance,
+  GiBamboo,
+} from 'react-icons/gi'
 import { BiSpa, BiTime } from 'react-icons/bi'
 import { MdSpa, MdFaceRetouchingNatural, MdArrowForward } from 'react-icons/md'
 import styles from './MegaMenu.module.scss'
@@ -30,15 +35,41 @@ const serviceCategories: ServiceCategory[] = [
   {
     id: 'massage',
     name: 'Massage Therapies',
-    description: 'Traditional and modern massage techniques for deep relaxation',
+    description:
+      'Traditional and modern massage techniques for deep relaxation',
     href: '/services/massage',
     icon: <GiLeafSwirl />,
     services: [
-      { id: 1, name: 'Traditional Malaysian Massage', price: 'RM 180', duration: '90 min', href: '/services/1', popular: true },
-      { id: 4, name: 'Hot Stone Therapy', price: 'RM 280', duration: '90 min', href: '/services/4' },
-      { id: 5, name: 'Deep Tissue Massage', price: 'RM 220', duration: '75 min', href: '/services/5' },
-      { id: 6, name: 'Couples Massage', price: 'RM 380', duration: '90 min', href: '/services/6' }
-    ]
+      {
+        id: 1,
+        name: 'Traditional Malaysian Massage',
+        price: 'RM 180',
+        duration: '90 min',
+        href: '/services/1',
+        popular: true,
+      },
+      {
+        id: 4,
+        name: 'Hot Stone Therapy',
+        price: 'RM 280',
+        duration: '90 min',
+        href: '/services/4',
+      },
+      {
+        id: 5,
+        name: 'Deep Tissue Massage',
+        price: 'RM 220',
+        duration: '75 min',
+        href: '/services/5',
+      },
+      {
+        id: 6,
+        name: 'Couples Massage',
+        price: 'RM 380',
+        duration: '90 min',
+        href: '/services/6',
+      },
+    ],
   },
   {
     id: 'aromatherapy',
@@ -47,10 +78,28 @@ const serviceCategories: ServiceCategory[] = [
     href: '/services/aromatherapy',
     icon: <GiLotusFlower />,
     services: [
-      { id: 2, name: 'Aromatherapy Wellness Journey', price: 'RM 220', duration: '75 min', href: '/services/2' },
-      { id: 7, name: 'Essential Oil Massage', price: 'RM 200', duration: '60 min', href: '/services/7' },
-      { id: 8, name: 'Aromatherapy Facial', price: 'RM 180', duration: '60 min', href: '/services/8' }
-    ]
+      {
+        id: 2,
+        name: 'Aromatherapy Wellness Journey',
+        price: 'RM 220',
+        duration: '75 min',
+        href: '/services/2',
+      },
+      {
+        id: 7,
+        name: 'Essential Oil Massage',
+        price: 'RM 200',
+        duration: '60 min',
+        href: '/services/7',
+      },
+      {
+        id: 8,
+        name: 'Aromatherapy Facial',
+        price: 'RM 180',
+        duration: '60 min',
+        href: '/services/8',
+      },
+    ],
   },
   {
     id: 'luxury',
@@ -59,10 +108,29 @@ const serviceCategories: ServiceCategory[] = [
     href: '/services/luxury',
     icon: <MdSpa />,
     services: [
-      { id: 3, name: 'Royal Malaysian Ritual', price: 'RM 580', duration: '150 min', href: '/services/3', popular: true },
-      { id: 9, name: 'Gold Leaf Facial', price: 'RM 380', duration: '90 min', href: '/services/9' },
-      { id: 10, name: 'Platinum Package', price: 'RM 800', duration: '180 min', href: '/services/10' }
-    ]
+      {
+        id: 3,
+        name: 'Royal Malaysian Ritual',
+        price: 'RM 580',
+        duration: '150 min',
+        href: '/services/3',
+        popular: true,
+      },
+      {
+        id: 9,
+        name: 'Gold Leaf Facial',
+        price: 'RM 380',
+        duration: '90 min',
+        href: '/services/9',
+      },
+      {
+        id: 10,
+        name: 'Platinum Package',
+        price: 'RM 800',
+        duration: '180 min',
+        href: '/services/10',
+      },
+    ],
   },
   {
     id: 'wellness',
@@ -71,11 +139,29 @@ const serviceCategories: ServiceCategory[] = [
     href: '/services/wellness',
     icon: <MdFaceRetouchingNatural />,
     services: [
-      { id: 11, name: 'Facial Rejuvenation', price: 'RM 160', duration: '60 min', href: '/services/11' },
-      { id: 12, name: 'Body Scrub & Wrap', price: 'RM 180', duration: '75 min', href: '/services/12' },
-      { id: 13, name: 'Detox Treatment', price: 'RM 220', duration: '90 min', href: '/services/13' }
-    ]
-  }
+      {
+        id: 11,
+        name: 'Facial Rejuvenation',
+        price: 'RM 160',
+        duration: '60 min',
+        href: '/services/11',
+      },
+      {
+        id: 12,
+        name: 'Body Scrub & Wrap',
+        price: 'RM 180',
+        duration: '75 min',
+        href: '/services/12',
+      },
+      {
+        id: 13,
+        name: 'Detox Treatment',
+        price: 'RM 220',
+        duration: '90 min',
+        href: '/services/13',
+      },
+    ],
+  },
 ]
 
 interface MegaMenuProps {
@@ -98,17 +184,19 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
             {serviceCategories.map((category) => (
               <button
                 key={category.id}
-                className={`${styles.categoryItem} ${activeCategory === category.id ? styles.active : ''}`}
+                className={`${styles.categoryItem} ${
+                  activeCategory === category.id ? styles.active : ''
+                }`}
                 onMouseEnter={() => setActiveCategory(category.id)}
                 onClick={onClose}
               >
                 <Link href={category.href} className={styles.categoryLink}>
-                  <div className={styles.categoryIcon}>
-                    {category.icon}
-                  </div>
+                  <div className={styles.categoryIcon}>{category.icon}</div>
                   <div className={styles.categoryInfo}>
                     <span className={styles.categoryName}>{category.name}</span>
-                    <span className={styles.categoryDesc}>{category.description}</span>
+                    <span className={styles.categoryDesc}>
+                      {category.description}
+                    </span>
                   </div>
                 </Link>
               </button>
@@ -120,7 +208,9 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
             {serviceCategories.map((category) => (
               <div
                 key={category.id}
-                className={`${styles.servicesList} ${activeCategory === category.id ? styles.active : ''}`}
+                className={`${styles.servicesList} ${
+                  activeCategory === category.id ? styles.active : ''
+                }`}
               >
                 <div className={styles.servicesHeader}>
                   <h4 className={styles.servicesTitle}>{category.name}</h4>
@@ -128,13 +218,15 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
                     View All <MdArrowForward />
                   </Link>
                 </div>
-                
+
                 <div className={styles.servicesGrid}>
                   {category.services.map((service) => (
                     <Link
                       key={service.id}
                       href={service.href}
-                      className={`${styles.serviceItem} ${service.popular ? styles.popular : ''}`}
+                      className={`${styles.serviceItem} ${
+                        service.popular ? styles.popular : ''
+                      }`}
                       onClick={onClose}
                     >
                       <div className={styles.serviceContent}>
@@ -145,7 +237,9 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
                           )}
                         </div>
                         <div className={styles.serviceMeta}>
-                          <span className={styles.servicePrice}>{service.price}</span>
+                          <span className={styles.servicePrice}>
+                            {service.price}
+                          </span>
                           <span className={styles.serviceDuration}>
                             <BiTime /> {service.duration}
                           </span>
@@ -177,13 +271,18 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
               <span className={styles.featuredBadge}>Featured</span>
               <h4 className={styles.featuredTitle}>Royal Malaysian Ritual</h4>
               <p className={styles.featuredDesc}>
-                Our signature treatment combining traditional Malaysian healing with luxury amenities.
+                Our signature treatment combining traditional Malaysian healing
+                with luxury amenities.
               </p>
               <div className={styles.featuredMeta}>
                 <span className={styles.featuredPrice}>RM 580</span>
                 <span className={styles.featuredDuration}>150 minutes</span>
               </div>
-              <Link href="/services/3" className={styles.featuredButton} onClick={onClose}>
+              <Link
+                href="/services/3"
+                className={styles.featuredButton}
+                onClick={onClose}
+              >
                 Book Experience
               </Link>
             </div>
@@ -192,15 +291,27 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
 
         {/* Quick Actions */}
         <div className={styles.quickActions}>
-          <Link href="/booking" className={styles.quickActionBtn} onClick={onClose}>
+          <Link
+            href="/booking"
+            className={styles.quickActionBtn}
+            onClick={onClose}
+          >
             <BiSpa />
             Book Appointment
           </Link>
-          <Link href="/services" className={styles.quickActionBtn} onClick={onClose}>
+          <Link
+            href="/services"
+            className={styles.quickActionBtn}
+            onClick={onClose}
+          >
             <GiBamboo />
             All Services
           </Link>
-          <Link href="/contact" className={styles.quickActionBtn} onClick={onClose}>
+          <Link
+            href="/contact"
+            className={styles.quickActionBtn}
+            onClick={onClose}
+          >
             <MdFaceRetouchingNatural />
             Contact Us
           </Link>

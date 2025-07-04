@@ -10,13 +10,17 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 export default function InstallPrompt() {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null)
   const [showPrompt, setShowPrompt] = useState(false)
   const [isInstalled, setIsInstalled] = useState(false)
 
   useEffect(() => {
     // Check if already installed
-    if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
+    if (
+      window.matchMedia &&
+      window.matchMedia('(display-mode: standalone)').matches
+    ) {
       setIsInstalled(true)
       return
     }
@@ -31,7 +35,7 @@ export default function InstallPrompt() {
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
-      
+
       // Show prompt after a delay to not be intrusive
       setTimeout(() => {
         setShowPrompt(true)
@@ -49,7 +53,10 @@ export default function InstallPrompt() {
     window.addEventListener('appinstalled', handleAppInstalled)
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+      window.removeEventListener(
+        'beforeinstallprompt',
+        handleBeforeInstallPrompt
+      )
       window.removeEventListener('appinstalled', handleAppInstalled)
     }
   }, [])
@@ -60,7 +67,7 @@ export default function InstallPrompt() {
     try {
       await deferredPrompt.prompt()
       const { outcome } = await deferredPrompt.userChoice
-      
+
       if (outcome === 'accepted') {
         console.log('User accepted the install prompt')
       } else {
@@ -90,7 +97,7 @@ export default function InstallPrompt() {
           <MdInstallMobile />
         </div>
         <div className={styles.text}>
-          <h3>Install Serenity Spa</h3>
+          <h3>Install Sharon Spa</h3>
           <p>Get quick access to book appointments and view services</p>
         </div>
         <div className={styles.actions}>

@@ -1,6 +1,6 @@
 # Media Attribution & Licensing
 
-This document outlines the licensing and attribution for all media assets used in the Serenity Spa website.
+This document outlines the licensing and attribution for all media assets used in the Sharon Spa website.
 
 ## Videos
 

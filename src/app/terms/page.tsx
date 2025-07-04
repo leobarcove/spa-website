@@ -3,24 +3,27 @@ import Footer from '@/components/Footer/Footer'
 import TermsSection from '@/components/Legal/TermsSection'
 
 export const metadata = {
-  title: 'Terms & Conditions | Serenity Spa Malaysia',
-  description: 'Read the terms and conditions for using Serenity Spa Malaysia services. Understand our booking policies, cancellation terms, and service guidelines.',
-  keywords: 'spa terms conditions, booking policy, cancellation policy, spa guidelines Malaysia',
+  title: 'Terms & Conditions | Sharon Spa',
+  description:
+    'Read the terms and conditions for using Sharon Spa services. Understand our booking policies, cancellation terms, and service guidelines.',
+  keywords:
+    'spa terms conditions, booking policy, cancellation policy, spa guidelines Malaysia',
   openGraph: {
-    title: 'Terms & Conditions | Serenity Spa Malaysia',
-    description: 'Read the terms and conditions for using Serenity Spa Malaysia services. Understand our booking policies, cancellation terms, and service guidelines.',
-    url: 'https://serenityspa.my/terms',
-    siteName: 'Serenity Spa Malaysia',
+    title: 'Terms & Conditions | Sharon Spa',
+    description:
+      'Read the terms and conditions for using Sharon Spa services. Understand our booking policies, cancellation terms, and service guidelines.',
+    url: 'https://sharonspa.my/terms',
+    siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Terms & Conditions | Serenity Spa Malaysia',
-    description: 'Read the terms and conditions for using Serenity Spa Malaysia services.',
+    title: 'Terms & Conditions | Sharon Spa',
+    description: 'Read the terms and conditions for using Sharon Spa services.',
   },
   alternates: {
-    canonical: 'https://serenityspa.my/terms',
+    canonical: 'https://sharonspa.my/terms',
   },
   robots: {
     index: true,

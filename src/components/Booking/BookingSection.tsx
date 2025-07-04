@@ -431,7 +431,7 @@ export default function BookingSection() {
               marginBottom: 'var(--space-6)',
               lineHeight: '1.6'
             }}>
-              Thank you for booking with Serenity Spa. We will contact you soon to confirm your appointment details.
+              Thank you for booking with Sharon Spa. We will contact you soon to confirm your appointment details.
             </p>
             <p style={{ 
               fontSize: 'var(--text-base)', 

@@ -11,16 +11,18 @@ export default function PrivacySection() {
           <p className={styles.subtitle}>
             Your privacy and personal data protection are our top priorities
           </p>
-          <div className={styles.lastUpdated}>
-            Last updated: July 3, 2025
-          </div>
+          <div className={styles.lastUpdated}>Last updated: July 3, 2025</div>
         </div>
 
         <div className={styles.content}>
           <section className={styles.section}>
             <h2>1. Introduction</h2>
             <p>
-              Serenity Spa Malaysia (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services or visit our website.
+              Sharon Spa (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is
+              committed to protecting your privacy and ensuring the security of
+              your personal information. This Privacy Policy explains how we
+              collect, use, disclose, and safeguard your information when you
+              use our services or visit our website.
             </p>
           </section>
 
@@ -36,7 +38,7 @@ export default function PrivacySection() {
                 <li>Health information relevant to spa treatments</li>
               </ul>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>2.2 Automatically Collected Information</h3>
               <ul>
@@ -47,7 +49,7 @@ export default function PrivacySection() {
                 <li>Location data (with your consent)</li>
               </ul>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>2.3 Health Information</h3>
               <ul>
@@ -72,7 +74,7 @@ export default function PrivacySection() {
                 <li>Processing payments and handling billing</li>
               </ul>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>3.2 Communication and Marketing</h3>
               <ul>
@@ -83,7 +85,7 @@ export default function PrivacySection() {
                 <li>Sending personalized recommendations</li>
               </ul>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>3.3 Business Operations</h3>
               <ul>
@@ -101,13 +103,16 @@ export default function PrivacySection() {
             <div className={styles.subsection}>
               <h3>4.1 We Do Not Sell Your Information</h3>
               <p>
-                We do not sell, rent, or trade your personal information to third parties for their marketing purposes.
+                We do not sell, rent, or trade your personal information to
+                third parties for their marketing purposes.
               </p>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>4.2 Limited Sharing</h3>
-              <p>We may share your information in the following circumstances:</p>
+              <p>
+                We may share your information in the following circumstances:
+              </p>
               <ul>
                 <li>With service providers who assist in our operations</li>
                 <li>When required by law or legal process</li>
@@ -130,11 +135,13 @@ export default function PrivacySection() {
                 <li>Physical security measures at our facilities</li>
               </ul>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>5.2 Data Retention</h3>
               <ul>
-                <li>Personal information is retained only as long as necessary</li>
+                <li>
+                  Personal information is retained only as long as necessary
+                </li>
                 <li>Health records are kept according to legal requirements</li>
                 <li>Inactive accounts may be archived or deleted</li>
                 <li>You can request deletion of your data at any time</li>
@@ -154,7 +161,7 @@ export default function PrivacySection() {
                 <li>Request data portability</li>
               </ul>
             </div>
-            
+
             <div className={styles.subsection}>
               <h3>6.2 Cookie Management</h3>
               <ul>
@@ -169,49 +176,75 @@ export default function PrivacySection() {
           <section className={styles.section}>
             <h2>7. Children&apos;s Privacy</h2>
             <p>
-              Our services are not intended for children under 18 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately.
+              Our services are not intended for children under 18 years of age.
+              We do not knowingly collect personal information from children. If
+              you believe we have inadvertently collected information from a
+              child, please contact us immediately.
             </p>
           </section>
 
           <section className={styles.section}>
             <h2>8. International Data Transfers</h2>
             <p>
-              Your information may be processed and stored in countries other than Malaysia. We ensure appropriate safeguards are in place to protect your data in accordance with applicable privacy laws.
+              Your information may be processed and stored in countries other
+              than Malaysia. We ensure appropriate safeguards are in place to
+              protect your data in accordance with applicable privacy laws.
             </p>
           </section>
 
           <section className={styles.section}>
             <h2>9. Changes to This Policy</h2>
             <p>
-              We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on our website and updating the &quot;Last Updated&quot; date. We encourage you to review this policy periodically.
+              We may update this Privacy Policy from time to time. We will
+              notify you of any material changes by posting the new policy on
+              our website and updating the &quot;Last Updated&quot; date. We
+              encourage you to review this policy periodically.
             </p>
           </section>
 
           <section className={styles.section}>
             <h2>10. Contact Us</h2>
             <p>
-              If you have any questions about this Privacy Policy or our data practices, please contact us:
+              If you have any questions about this Privacy Policy or our data
+              practices, please contact us:
             </p>
             <div className={styles.contactInfo}>
-              <p><strong>Data Protection Officer</strong></p>
-              <p><strong>Serenity Spa Malaysia</strong></p>
-              <p>📍 Kuala Lumpur, Malaysia</p>
-              <p>📞 +60 3-2161 0000</p>
-              <p>✉️ privacy@serenityspa.my</p>
-              <p>✉️ info@serenityspa.my</p>
+              <p>
+                <strong>Data Protection Officer</strong>
+              </p>
+              <p>
+                <strong>Sharon Spa</strong>
+              </p>
+              <p>📍 Georgetown, Pulau Pinang</p>
+              <p>📞 601112914118</p>
+              <p>✉️ privacy@sharonspa.my</p>
+              <p>✉️ info@sharonspa.my</p>
             </div>
           </section>
 
           <section className={styles.section}>
             <h2>11. Legal Basis for Processing (GDPR)</h2>
             <p>
-              For users in the European Union, we process your personal data based on:
+              For users in the European Union, we process your personal data
+              based on:
             </p>
             <ul>
-              <li><strong>Contract:</strong> To provide spa services you&apos;ve booked</li>
-              <li><strong>Consent:</strong> For marketing communications and optional features</li>
-              <li><strong>Legitimate Interest:</strong> For business operations and security</li>
-              <li><strong>Legal Obligation:</strong> To comply with applicable laws</li>
+              <li>
+                <strong>Contract:</strong> To provide spa services you&apos;ve
+                booked
+              </li>
+              <li>
+                <strong>Consent:</strong> For marketing communications and
+                optional features
+              </li>
+              <li>
+                <strong>Legitimate Interest:</strong> For business operations
+                and security
+              </li>
+              <li>
+                <strong>Legal Obligation:</strong> To comply with applicable
+                laws
+              </li>
             </ul>
           </section>
         </div>

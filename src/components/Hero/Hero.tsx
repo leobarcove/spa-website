@@ -13,7 +13,7 @@ const features = [
   {
     id: 1,
     icon: <GiLeafSwirl />,
-    text: 'Malaysian Heritage'
+    text: 'Penang Heritage'
   },
   {
     id: 2,
@@ -58,15 +58,15 @@ export default function Hero() {
         <div className={styles.textContent}>
           <div className={styles.badge}>
             <MdStar />
-            Award-Winning Spa
+            Georgetown Heritage Spa
           </div>
           
           <h1 className={styles.mainTitle}>
-            Discover Pure <span>Tranquility</span> in Malaysia's Premier Spa
+            Discover Pure <span>Tranquility</span> in Penang's Premier Spa
           </h1>
           
           <p className={styles.subtitle}>
-            Experience authentic Malaysian healing traditions combined with modern luxury. 
+            Experience authentic Malaysian healing traditions in the heart of Georgetown's UNESCO Heritage zone. 
             Your journey to complete wellness begins here.
           </p>
           

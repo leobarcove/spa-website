@@ -2,13 +2,9 @@
 
 .testimonials {
   min-height: 100vh;
-  padding: var(--space-16) 0 var(--space-12);
-  padding-top: 120px; // Account for fixed header
-  background: linear-gradient(135deg, var(--color-neutral-50) 0%, white 100%);
-  
-  @include tablet-up {
-    padding-top: 140px;
-  }
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #f8f9fa;
 }
 
 .container {
@@ -18,34 +14,31 @@
 // Header
 .header {
   text-align: center;
-  margin-bottom: var(--space-12);
+  margin-bottom: 40px;
 }
 
 .title {
-  font-family: var(--font-heading);
-  font-size: var(--text-4xl);
-  font-weight: 400;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-4);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1a2e1a;
+  margin-bottom: 16px;
+  line-height: 1.2;
   
   @include tablet-up {
-    font-size: var(--text-5xl);
-  }
-  
-  @include desktop-up {
-    font-size: var(--text-6xl);
+    font-size: 3rem;
   }
 }
 
 .subtitle {
-  font-size: var(--text-lg);
-  color: var(--color-text-primary);
+  font-size: 1rem;
+  color: #6b7280;
   max-width: 600px;
-  margin: 0 auto var(--space-8);
+  margin: 0 auto 32px;
   line-height: 1.6;
   
   @include tablet-up {
-    font-size: var(--text-xl);
+    font-size: 1.125rem;
   }
 }
 

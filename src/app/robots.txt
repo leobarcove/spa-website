@@ -15,7 +15,7 @@ Allow: /contact
 Allow: /booking
 
 # Sitemap location
-Sitemap: https://serenityspa.my/sitemap.xml
+Sitemap: https://sharonspa.my/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

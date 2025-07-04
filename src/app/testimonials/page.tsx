@@ -3,24 +3,28 @@ import Footer from '@/components/Footer/Footer'
 import TestimonialsPageSection from '@/components/Testimonials/TestimonialsPageSection'
 
 export const metadata = {
-  title: 'Client Testimonials | Serenity Spa Malaysia',
-  description: 'Read what our valued clients say about their Serenity Spa experience. Discover authentic reviews and testimonials from our satisfied customers in Malaysia.',
-  keywords: 'spa testimonials Malaysia, customer reviews Serenity Spa, luxury spa feedback, client experiences wellness spa',
+  title: 'Client Testimonials | Sharon Spa',
+  description:
+    'Read what our valued clients say about their Sharon Spa experience. Discover authentic reviews and testimonials from our satisfied customers in Malaysia.',
+  keywords:
+    'spa testimonials Malaysia, customer reviews Sharon Spa, luxury spa feedback, client experiences wellness spa',
   openGraph: {
-    title: 'Client Testimonials | Serenity Spa Malaysia',
-    description: 'Read what our valued clients say about their Serenity Spa experience. Discover authentic reviews and testimonials.',
-    url: 'https://serenityspa.my/testimonials',
-    siteName: 'Serenity Spa Malaysia',
+    title: 'Client Testimonials | Sharon Spa',
+    description:
+      'Read what our valued clients say about their Sharon Spa experience. Discover authentic reviews and testimonials.',
+    url: 'https://sharonspa.my/testimonials',
+    siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Client Testimonials | Serenity Spa Malaysia',
-    description: 'Read what our valued clients say about their Serenity Spa experience.',
+    title: 'Client Testimonials | Sharon Spa',
+    description:
+      'Read what our valued clients say about their Sharon Spa experience.',
   },
   alternates: {
-    canonical: 'https://serenityspa.my/testimonials',
+    canonical: 'https://sharonspa.my/testimonials',
   },
   robots: {
     index: true,

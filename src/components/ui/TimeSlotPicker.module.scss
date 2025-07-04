@@ -143,22 +143,34 @@
     transform: translateY(-1px);
   }
   
-  &.selected {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: white;
-    
-    .slotStatus .availability {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  }
-  
   &.almostFull {
     border-color: var(--color-secondary);
     background: rgba(201, 169, 97, 0.05);
     
     &:hover {
       border-color: var(--color-secondary-dark);
+    }
+  }
+  
+  &.selected {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: white;
+    font-weight: 600;
+    
+    .slotStatus .availability {
+      color: white;
+      font-weight: 600;
+    }
+    
+    .slotTime {
+      color: white;
+    }
+    
+    // Override almostFull styles when selected
+    &.almostFull {
+      background: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
     }
   }
   
@@ -196,14 +208,19 @@
 }
 
 .selectedIcon {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: -8px;
-  right: -8px;
+  width: 24px;
+  height: 24px;
   background: var(--color-secondary);
   border-radius: var(--radius-full);
-  padding: 2px;
+  padding: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .availability {

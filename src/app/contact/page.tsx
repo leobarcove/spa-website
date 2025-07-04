@@ -3,20 +3,23 @@ import ContactSection from '@/components/Contact/ContactSection'
 import Footer from '@/components/Footer/Footer'
 
 export const metadata = {
-  title: 'Contact Us | Serenity Spa Malaysia | Location & Booking Info',
-  description: 'Contact Serenity Spa Malaysia in Kuala Lumpur. Find our location, business hours, phone number, and booking information. Visit our luxury wellness sanctuary today.',
-  keywords: 'contact spa Malaysia, spa location KL, Bukit Bintang spa, spa phone number, spa address Malaysia, spa business hours',
+  title: 'Contact Us | Sharon Spa | Location & Booking Info',
+  description:
+    'Contact Sharon Spa in Georgetown, Penang. Find our location, business hours, phone number, and booking information. Visit our luxury wellness sanctuary today.',
+  keywords:
+    'contact spa Penang, spa location Georgetown, Penang spa, spa phone number, spa address Penang, spa business hours',
   openGraph: {
-    title: 'Contact Us | Serenity Spa Malaysia | Location & Booking Info',
-    description: 'Contact Serenity Spa Malaysia in Kuala Lumpur. Find our location, business hours, phone number, and booking information.',
-    url: 'https://serenityspa.my/contact',
-    siteName: 'Serenity Spa Malaysia',
+    title: 'Contact Us | Sharon Spa | Location & Booking Info',
+    description:
+      'Contact Sharon Spa in Georgetown, Penang. Find our location, business hours, phone number, and booking information.',
+    url: 'https://sharonspa.my/contact',
+    siteName: 'Sharon Spa',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
         width: 1200,
         height: 630,
-        alt: 'Contact Serenity Spa Malaysia - Location & Info',
+        alt: 'Contact Sharon Spa - Location & Info',
       },
     ],
     locale: 'en_MY',
@@ -24,12 +27,15 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us | Serenity Spa Malaysia | Location & Booking Info',
-    description: 'Contact Serenity Spa Malaysia in Kuala Lumpur. Find our location, business hours, phone number, and booking information.',
-    images: ['https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80'],
+    title: 'Contact Us | Sharon Spa | Location & Booking Info',
+    description:
+      'Contact Sharon Spa in Georgetown, Penang. Find our location, business hours, phone number, and booking information.',
+    images: [
+      'https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
+    ],
   },
   alternates: {
-    canonical: 'https://serenityspa.my/contact',
+    canonical: 'https://sharonspa.my/contact',
   },
   robots: {
     index: true,
@@ -41,7 +47,7 @@ export default function ContactPage() {
   return (
     <main>
       <Header />
-      <div style={{ paddingTop: '120px' }}>
+      <div>
         <ContactSection />
       </div>
       <Footer />

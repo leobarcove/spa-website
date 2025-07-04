@@ -2,9 +2,9 @@
 
 .serviceDetail {
   min-height: 100vh;
-  padding: var(--space-12) 0;
-  background: linear-gradient(135deg, var(--color-neutral-50) 0%, white 100%);
-}
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #f8f9fa;
 
 .container {
   max-width: var(--max-width);
@@ -80,34 +80,32 @@
 
 .category {
   display: inline-block;
-  background: var(--color-primary-light);
-  color: var(--color-primary);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-full);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  margin-bottom: var(--space-4);
+  background: #c9a961;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
 }
 
 .title {
-  font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: 400;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-4);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1a2e1a;
+  margin-bottom: 20px;
   line-height: 1.2;
   
   @include tablet-up {
-    font-size: var(--text-4xl);
-  }
-  
-  @include desktop-up {
-    font-size: var(--text-5xl);
+    font-size: 3rem;
   }
 }
 
 .description {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: var(--space-6);
@@ -140,42 +138,19 @@
   flex-wrap: wrap;
 }
 
-.primaryBtn,
-.secondaryBtn {
-  padding: var(--space-4) var(--space-8);
-  border-radius: var(--radius-full);
-  font-size: var(--text-base);
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  transition: all var(--transition-base);
-  border: 2px solid var(--color-primary);
+.primaryBtn {
+  @include button-primary;
   
   @include mobile-only {
-    flex: 1;
-    min-width: 0;
-  }
-}
-
-.primaryBtn {
-  background: var(--color-primary);
-  color: white;
-  
-  &:hover {
-    background: var(--color-primary-dark);
-    transform: translateY(-2px);
+    width: 100%;
   }
 }
 
 .secondaryBtn {
-  background: transparent;
-  color: var(--color-primary);
+  @include button-secondary;
   
-  &:hover {
-    background: var(--color-primary);
-    color: white;
-    transform: translateY(-2px);
+  @include mobile-only {
+    width: 100%;
   }
 }
 
@@ -192,14 +167,14 @@
   }
   
   h2 {
-    font-family: var(--font-heading);
-    font-size: var(--text-2xl);
-    font-weight: 600;
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-6);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: #1a2e1a;
+    margin-bottom: 24px;
     
     @include tablet-up {
-      font-size: var(--text-3xl);
+      font-size: 2rem;
     }
   }
   
@@ -353,59 +328,63 @@
 
 // Bottom CTA
 .bottomCta {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-12) var(--space-6);
+  background: linear-gradient(135deg, #1a2e1a 0%, #2d4a2d 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
   text-align: center;
-  color: white;
+  margin: 0 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 .ctaContent {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   
   h2 {
-    font-family: var(--font-heading);
-    font-size: var(--text-3xl);
-    font-weight: 400;
-    margin-bottom: var(--space-4);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: white;
     
     @include tablet-up {
-      font-size: var(--text-4xl);
+      font-size: 2.5rem;
     }
   }
   
   p {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-8);
-    opacity: 0.9;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
   }
   
   .ctaButtons {
     justify-content: center;
     
-    .primaryBtn,
-    .secondaryBtn {
-      border-color: white;
-    }
-    
     .primaryBtn {
-      background: white;
+      // Override for dark background
+      background-color: white;
       color: var(--color-primary);
+      border-color: white;
       
-      &:hover {
-        background: var(--color-neutral-50);
+      &:hover:not(:disabled) {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-1px);
       }
     }
     
     .secondaryBtn {
-      background: transparent;
+      // Override for dark background
+      background-color: transparent;
       color: white;
+      border-color: white;
       
-      &:hover {
-        background: white;
+      &:hover:not(:disabled) {
+        background-color: white;
         color: var(--color-primary);
+        transform: translateY(-1px);
       }
     }
   }
@@ -468,15 +447,16 @@
   }
   
   .bottomCta {
-    padding: var(--space-8) var(--space-4);
+    padding: 40px 20px;
+    margin: 0 10px;
     
     .ctaContent {
       h2 {
-        font-size: var(--text-2xl);
+        font-size: 1.75rem;
       }
       
       p {
-        font-size: var(--text-base);
+        font-size: 0.95rem;
       }
     }
   }
@@ -493,4 +473,5 @@
   .secondaryBtn:hover {
     transform: none;
   }
+}
 }

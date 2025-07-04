@@ -1,7 +1,7 @@
-# Domain Setup Guide for serenityspa.my
+# Domain Setup Guide for sharonspa.my
 
 ## Prerequisites
-- [ ] Domain registered (serenityspa.my)
+- [ ] Domain registered (sharonspa.my)
 - [ ] Access to domain registrar's DNS management panel
 - [ ] Vercel/Netlify account created
 - [ ] Project deployed to hosting provider
@@ -43,14 +43,14 @@
 #### Vercel:
 1. Go to your project dashboard
 2. Navigate to Settings → Domains
-3. Add domain: `serenityspa.my`
-4. Add domain: `www.serenityspa.my`
+3. Add domain: `sharonspa.my`
+4. Add domain: `www.sharonspa.my`
 5. Copy the DNS records provided
 
 #### Netlify:
 1. Go to Site settings → Domain management
 2. Add custom domain
-3. Enter `serenityspa.my`
+3. Enter `sharonspa.my`
 4. Copy DNS configuration
 
 ### Step 3: Configure DNS Records
@@ -91,7 +91,7 @@ Instead of individual records, you can use Vercel/Netlify nameservers:
 
 ### Step 5: Verify SSL Certificate
 Once DNS propagates:
-1. Visit https://serenityspa.my
+1. Visit https://sharonspa.my
 2. Check for the padlock icon in the browser
 3. Verify certificate details
 4. Test both www and non-www versions
@@ -99,15 +99,15 @@ Once DNS propagates:
 ### Step 6: Configure Redirects
 
 Ensure proper redirects are working:
-- `http://serenityspa.my` → `https://serenityspa.my`
-- `http://www.serenityspa.my` → `https://serenityspa.my`
-- `https://www.serenityspa.my` → `https://serenityspa.my`
+- `http://sharonspa.my` → `https://sharonspa.my`
+- `http://www.sharonspa.my` → `https://sharonspa.my`
+- `https://www.sharonspa.my` → `https://sharonspa.my`
 
 ### Step 7: Update Environment Variables
 
 In your hosting provider dashboard, update:
 ```
-NEXT_PUBLIC_SITE_URL=https://serenityspa.my
+NEXT_PUBLIC_SITE_URL=https://sharonspa.my
 ```
 
 ### Step 8: Post-Deployment Testing
@@ -126,9 +126,9 @@ NEXT_PUBLIC_SITE_URL=https://serenityspa.my
 
 1. **Google Search Console**:
    - Go to https://search.google.com/search-console
-   - Add property: `serenityspa.my`
+   - Add property: `sharonspa.my`
    - Verify ownership (HTML tag or DNS)
-   - Submit sitemap: `https://serenityspa.my/sitemap.xml`
+   - Submit sitemap: `https://sharonspa.my/sitemap.xml`
 
 2. **Bing Webmaster Tools**:
    - Go to https://www.bing.com/webmasters

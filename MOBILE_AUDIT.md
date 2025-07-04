@@ -2,7 +2,7 @@
 
 ## ✅ Mobile-First Design Confirmation
 
-The Serenity Spa website is built with a **mobile-first approach** and is fully optimized for mobile devices.
+The Sharon Spa website is built with a **mobile-first approach** and is fully optimized for mobile devices.
 
 ### 1. Responsive Design Foundation
 
@@ -151,7 +151,7 @@ viewport: {
 
 ### Summary
 
-The Serenity Spa website is **fully mobile-friendly** with:
+The Sharon Spa website is **fully mobile-friendly** with:
 - ✅ Responsive design from 320px up
 - ✅ Touch-optimized interface
 - ✅ Fast loading on mobile networks

@@ -1,7 +1,7 @@
 # Email Configuration Guide
 
 ## Overview
-This directory contains email templates and services for the Serenity Spa booking system. Currently, it includes a mock implementation that needs to be connected to a real email service provider for production use.
+This directory contains email templates and services for the Sharon Spa booking system. Currently, it includes a mock implementation that needs to be connected to a real email service provider for production use.
 
 ## Current Implementation
 
@@ -40,15 +40,15 @@ Add to `.env.local`:
 ```env
 # SendGrid
 SENDGRID_API_KEY=your_sendgrid_api_key
-SENDGRID_FROM_EMAIL=noreply@serenityspa.my
-SENDGRID_VERIFIED_SENDER=bookings@serenityspa.my
+SENDGRID_FROM_EMAIL=noreply@sharonspa.my
+SENDGRID_VERIFIED_SENDER=bookings@sharonspa.my
 
 # OR Nodemailer SMTP
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
-SMTP_FROM=Serenity Spa <noreply@serenityspa.my>
+SMTP_FROM=Sharon Spa <noreply@sharonspa.my>
 
 # OR Resend
 RESEND_API_KEY=your_resend_api_key

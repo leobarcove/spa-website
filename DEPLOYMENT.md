@@ -1,7 +1,7 @@
-# Deployment Guide for Serenity Spa Website
+# Deployment Guide for Sharon Spa Website
 
 ## Overview
-This guide provides step-by-step instructions for deploying the Serenity Spa website to production.
+This guide provides step-by-step instructions for deploying the Sharon Spa website to production.
 
 ## Pre-Deployment Checklist
 
@@ -9,7 +9,7 @@ This guide provides step-by-step instructions for deploying the Serenity Spa web
 - [x] Build runs without errors (`npm run build`)
 - [x] Environment variables documented
 - [x] Email templates configured
-- [ ] Domain name registered (serenityspa.my)
+- [ ] Domain name registered (sharonspa.my)
 - [ ] Email service provider account created
 - [ ] Analytics accounts verified
 
@@ -39,11 +39,11 @@ Vercel is the recommended platform for Next.js applications, offering:
    ```
    NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
    NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
-   NEXT_PUBLIC_SITE_URL=https://serenityspa.my
+   NEXT_PUBLIC_SITE_URL=https://sharonspa.my
    
    # Add email service credentials when ready:
    SENDGRID_API_KEY=your_api_key
-   SENDGRID_FROM_EMAIL=noreply@serenityspa.my
+   SENDGRID_FROM_EMAIL=noreply@sharonspa.my
    ```
 
 4. **Deploy**
@@ -53,7 +53,7 @@ Vercel is the recommended platform for Next.js applications, offering:
 
 5. **Configure Custom Domain**
    - Go to Settings → Domains
-   - Add `serenityspa.my` and `www.serenityspa.my`
+   - Add `sharonspa.my` and `www.sharonspa.my`
    - Update DNS records at your domain registrar:
      ```
      A     @      76.76.21.21
@@ -169,12 +169,12 @@ Vercel is the recommended platform for Next.js applications, offering:
 # Public Variables (exposed to client)
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
-NEXT_PUBLIC_SITE_URL=https://serenityspa.my
+NEXT_PUBLIC_SITE_URL=https://sharonspa.my
 
 # Server Variables (private)
 # Email Service (choose one)
 SENDGRID_API_KEY=your_sendgrid_key
-SENDGRID_FROM_EMAIL=noreply@serenityspa.my
+SENDGRID_FROM_EMAIL=noreply@sharonspa.my
 
 # OR
 SMTP_HOST=smtp.gmail.com

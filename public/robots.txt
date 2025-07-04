@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://serenityspa.my/sitemap.xml
+Sitemap: https://sharonspa.my/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/

@@ -26,14 +26,16 @@ interface BookingDetails {
 }
 
 // Email template functions
-export function generateBookingConfirmationEmail(booking: BookingDetails): string {
+export function generateBookingConfirmationEmail(
+  booking: BookingDetails
+): string {
   return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmation - Serenity Spa Malaysia</title>
+    <title>Booking Confirmation - Sharon Spa</title>
     <style>
         body {
             margin: 0;
@@ -162,7 +164,7 @@ export function generateBookingConfirmationEmail(booking: BookingDetails): strin
 <body>
     <div class="container">
         <div class="header">
-            <h1>SERENITY SPA</h1>
+            <h1>SHARON SPA</h1>
             <p style="margin: 10px 0 0; font-size: 14px; letter-spacing: 1px;">LUXURY WELLNESS & BEAUTY</p>
         </div>
         
@@ -171,7 +173,7 @@ export function generateBookingConfirmationEmail(booking: BookingDetails): strin
                 Dear ${booking.customerName},
             </div>
             
-            <p>Thank you for choosing Serenity Spa Malaysia. We are delighted to confirm your booking and look forward to providing you with an exceptional spa experience.</p>
+            <p>Thank you for choosing Sharon Spa. We are delighted to confirm your booking and look forward to providing you with an exceptional spa experience.</p>
             
             <div class="booking-details">
                 <h2>Booking Confirmation #${booking.bookingId}</h2>
@@ -196,24 +198,34 @@ export function generateBookingConfirmationEmail(booking: BookingDetails): strin
                     <span class="detail-value">${booking.duration}</span>
                 </div>
                 
-                ${booking.therapist ? `
+                ${
+                  booking.therapist
+                    ? `
                 <div class="detail-row">
                     <span class="detail-label">Therapist:</span>
                     <span class="detail-value">${booking.therapist}</span>
                 </div>
-                ` : ''}
+                `
+                    : ''
+                }
                 
                 <div class="detail-row">
                     <span class="detail-label">Total Amount:</span>
-                    <span class="detail-value" style="font-size: 18px; color: #C9A961;">RM ${booking.servicePrice}</span>
+                    <span class="detail-value" style="font-size: 18px; color: #C9A961;">RM ${
+                      booking.servicePrice
+                    }</span>
                 </div>
                 
-                ${booking.specialRequests ? `
+                ${
+                  booking.specialRequests
+                    ? `
                 <div class="detail-row">
                     <span class="detail-label">Special Requests:</span>
                     <span class="detail-value">${booking.specialRequests}</span>
                 </div>
-                ` : ''}
+                `
+                    : ''
+                }
             </div>
             
             <div class="info-section">
@@ -228,7 +240,7 @@ export function generateBookingConfirmationEmail(booking: BookingDetails): strin
             </div>
             
             <div class="cta-section">
-                <a href="https://serenityspa.my/booking" class="cta-button">Manage Your Booking</a>
+                <a href="https://sharonspa.my/booking" class="cta-button">Manage Your Booking</a>
             </div>
             
             <div class="info-section">
@@ -238,11 +250,13 @@ export function generateBookingConfirmationEmail(booking: BookingDetails): strin
         </div>
         
         <div class="footer">
-            <p><strong>Serenity Spa Malaysia</strong></p>
-            <p>📍 Level 2, The Gardens Mall, Mid Valley City, 59200 Kuala Lumpur</p>
-            <p>📞 +60 3-2161 0000 | ✉️ <a href="mailto:info@serenityspa.my">info@serenityspa.my</a></p>
+            <p><strong>Sharon Spa</strong></p>
+            <p>📍 181 Tingkat 1, Lot B, Lebuh Melaka, 10400 Georgetown, Pulau Pinang</p>
+            <p>📞 601112914118 | ✉️ <a href="mailto:info@sharonsparelax.my">info@sharonsparelax.my</a></p>
             <p style="margin-top: 20px; font-size: 12px; color: #999;">
-                This email was sent to ${booking.customerEmail} regarding booking #${booking.bookingId}
+                This email was sent to ${
+                  booking.customerEmail
+                } regarding booking #${booking.bookingId}
             </p>
         </div>
     </div>
@@ -258,7 +272,7 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment Reminder - Serenity Spa Malaysia</title>
+    <title>Appointment Reminder - Sharon Spa</title>
     <style>
         body {
             margin: 0;
@@ -353,14 +367,16 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
 <body>
     <div class="container">
         <div class="header">
-            <h1>SERENITY SPA</h1>
+            <h1>SHARON SPA</h1>
             <p style="margin: 10px 0 0; font-size: 14px; letter-spacing: 1px;">APPOINTMENT REMINDER</p>
         </div>
         
         <div class="content">
             <div class="reminder-box">
-                <h2 style="margin: 0 0 10px; color: #1a2e1a;">Hello ${booking.customerName},</h2>
-                <p style="margin: 0;">This is a friendly reminder about your upcoming appointment at Serenity Spa Malaysia.</p>
+                <h2 style="margin: 0 0 10px; color: #1a2e1a;">Hello ${
+                  booking.customerName
+                },</h2>
+                <p style="margin: 0;">This is a friendly reminder about your upcoming appointment at Sharon Spa.</p>
             </div>
             
             <div class="appointment-details">
@@ -368,12 +384,16 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
                 <p>📅 ${booking.date}</p>
                 <p class="time">🕐 ${booking.time}</p>
                 <p>⏱️ Duration: ${booking.duration}</p>
-                ${booking.therapist ? `<p>👤 Therapist: ${booking.therapist}</p>` : ''}
+                ${
+                  booking.therapist
+                    ? `<p>👤 Therapist: ${booking.therapist}</p>`
+                    : ''
+                }
             </div>
             
             <div class="cta-section">
-                <a href="https://serenityspa.my/booking" class="cta-button">Confirm Attendance</a>
-                <a href="tel:+60321610000" class="cta-button secondary">Call to Reschedule</a>
+                <a href="https://sharonspa.my/booking" class="cta-button">Confirm Attendance</a>
+                <a href="tel:601112914118" class="cta-button secondary">Call to Reschedule</a>
             </div>
             
             <div style="background-color: #fff5e6; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -388,9 +408,9 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
         </div>
         
         <div class="footer">
-            <p><strong>Serenity Spa Malaysia</strong></p>
-            <p>📍 Level 2, The Gardens Mall, Mid Valley City, 59200 Kuala Lumpur</p>
-            <p>📞 +60 3-2161 0000 | ✉️ <a href="mailto:info@serenityspa.my">info@serenityspa.my</a></p>
+            <p><strong>Sharon Spa</strong></p>
+            <p>📍 181 Tingkat 1, Lot B, Lebuh Melaka, 10400 Georgetown, Pulau Pinang</p>
+            <p>📞 601112914118 | ✉️ <a href="mailto:info@sharonsparelax.my">info@sharonsparelax.my</a></p>
         </div>
     </div>
 </body>
@@ -399,19 +419,21 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
 }
 
 // Mock email sending function - replace with actual implementation
-export async function sendEmail(options: EmailOptions): Promise<{ success: boolean; error?: string }> {
+export async function sendEmail(
+  options: EmailOptions
+): Promise<{ success: boolean; error?: string }> {
   // In production, you would:
   // 1. Use a real email service (SendGrid, Nodemailer with SMTP, etc.)
   // 2. Add proper error handling
   // 3. Include retry logic
   // 4. Add email validation
-  
+
   console.log('Email would be sent:', {
     to: options.to,
     subject: options.subject,
-    from: options.from || 'noreply@serenityspa.my'
+    from: options.from || 'noreply@sharonspa.my',
   })
-  
+
   // Mock successful response
   return { success: true }
 }
@@ -419,23 +441,23 @@ export async function sendEmail(options: EmailOptions): Promise<{ success: boole
 // Convenience function for sending booking confirmation
 export async function sendBookingConfirmation(booking: BookingDetails) {
   const html = generateBookingConfirmationEmail(booking)
-  
+
   return sendEmail({
     to: booking.customerEmail,
-    subject: `Booking Confirmation #${booking.bookingId} - Serenity Spa Malaysia`,
+    subject: `Booking Confirmation #${booking.bookingId} - Sharon Spa`,
     html,
-    from: 'bookings@serenityspa.my'
+    from: 'bookings@sharonspa.my',
   })
 }
 
 // Convenience function for sending booking reminder
 export async function sendBookingReminder(booking: BookingDetails) {
   const html = generateBookingReminderEmail(booking)
-  
+
   return sendEmail({
     to: booking.customerEmail,
     subject: `Appointment Reminder - ${booking.date} at ${booking.time}`,
     html,
-    from: 'reminders@serenityspa.my'
+    from: 'reminders@sharonspa.my',
   })
 }
