@@ -179,6 +179,7 @@ export default function ImagePreviewModal({
               }}
               priority
               draggable={false}
+              unoptimized
             />
           </div>
         </div>

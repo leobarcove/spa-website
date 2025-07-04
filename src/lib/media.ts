@@ -20,10 +20,48 @@ export const mediaAssets = {
   },
   
   images: {
-    // Unsplash images (royalty-free for commercial use)
-    heroPoster: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    spaRoom: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    treatment: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    // Hero images
+    heroPoster: "/images/hero/hero-main.jpg",
+    heroBackground: "/images/hero/hero-main.jpg",
+    spaRoom: "/images/hero/spa-room.jpg",
+    
+    // About
+    spaInterior: "/images/about/spa-interior.jpg",
+    
+    // Services
+    services: {
+      aromatherapy: "/images/services/aromatherapy.jpg",
+      couplesMassage: "/images/services/couples-massage.jpg",
+      deepTissue: "/images/services/deep-tissue.jpg",
+      hotStone: "/images/services/hot-stone.jpg",
+      royalRitual: "/images/services/royal-ritual.jpg",
+      traditionalMassage: "/images/services/traditional-massage.jpg",
+    },
+    
+    // Products
+    products: {
+      castorOil: "/images/products/castor-massage-oil.jpg",
+      coconutOil: "/images/products/coconut-body-oil.jpg",
+      eucalyptusBlend: "/images/products/eucalyptus-blend.jpg",
+      lavenderOil: "/images/products/lavender-aroma-oil.jpg",
+      lemongrassOil: "/images/products/lemongrass-massage-oil.jpg",
+      ylangYlang: "/images/products/ylang-ylang-romance-blend.jpg",
+    },
+    
+    // Team avatars
+    avatars: {
+      ahmadRahman: "/images/avatars/ahmad-rahman.jpg",
+      davidWong: "/images/avatars/david-wong.jpg",
+      jamesLee: "/images/avatars/james-lee.jpg",
+      lisaWong: "/images/avatars/lisa-wong.jpg",
+      michelleTan: "/images/avatars/michelle-tan.jpg",
+      priyaSharma: "/images/avatars/priya-sharma.jpg",
+      sarahChen: "/images/avatars/sarah-chen.jpg",
+      sarahLim: "/images/avatars/sarah-lim.jpg",
+    },
+    
+    // Payment
+    qrCode: "/images/tngo_qrcode.jpg",
   }
 }
 
