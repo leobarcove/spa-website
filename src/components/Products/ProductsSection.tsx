@@ -128,7 +128,7 @@ const products: Product[] = [
       'Stress relief',
       'Romantic ambiance',
     ],
-    image: '/images/products/ylang-ylang-blend.jpg',
+    image: '/images/products/ylang-ylang-romance-blend.jpg',
     category: 'Aromatherapy',
     inStock: false,
     size: '30ml',

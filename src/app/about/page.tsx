@@ -12,7 +12,7 @@ export const metadata = {
     title: 'About Us | Sharon Spa | Traditional Wellness Sanctuary',
     description:
       "Learn about Sharon Spa, Georgetown Penang's premier wellness sanctuary. Discover our story, philosophy, and commitment to traditional healing.",
-    url: 'https://sharonspa.my/about',
+    url: 'https://sharon-spa.com/about',
     siteName: 'Sharon Spa',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://sharonspa.my/about',
+    canonical: 'https://sharon-spa.com/about',
   },
   robots: {
     index: true,

@@ -214,7 +214,7 @@ export default function TermsSection() {
               </p>
               <p>📍 Georgetown, Pulau Pinang</p>
               <p>📞 601112914118</p>
-              <p>✉️ info@sharonspa.my</p>
+              <p>✉️ info@sharon-spa.com</p>
             </div>
           </section>
         </div>

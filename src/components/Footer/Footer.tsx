@@ -42,9 +42,6 @@ export default function Footer() {
               <li>
                 <Link href="/booking">Book Online</Link>
               </li>
-              <li>
-                <Link href="/gift-cards">Gift Cards</Link>
-              </li>
             </ul>
           </div>
 
@@ -77,7 +74,7 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <MdEmail />
-                <p>info@sharonsparelax.my</p>
+                <p>info@sharon-spa.com</p>
               </div>
             </div>
           </div>

@@ -11,11 +11,13 @@ import {
   MdCheck,
   MdPayment,
   MdAccountBalance,
+  MdZoomIn,
 } from 'react-icons/md'
 import { FaWhatsapp } from 'react-icons/fa'
 import { BiTime, BiCar, BiTrain } from 'react-icons/bi'
 import ClickToCall from '@/components/ui/ClickToCall'
 import Modal from '@/components/ui/Modal'
+import ImagePreviewModal from '@/components/ui/ImagePreviewModal'
 import Image from 'next/image'
 import styles from './ContactSection.module.scss'
 
@@ -31,7 +33,7 @@ const contactInfo = {
   city: '10400 Georgetown, Pulau Pinang',
   phone: '601112914118',
   whatsapp: '601112914118',
-  email: 'info@sharonsparelax.my',
+  email: 'info@sharon-spa.com',
 }
 
 const paymentInfo = {
@@ -69,6 +71,7 @@ export default function ContactSection() {
     message: '',
   })
   const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [showQRPreview, setShowQRPreview] = useState(false)
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -167,7 +170,11 @@ export default function ContactSection() {
                     <MdPayment className={styles.infoIcon} />
                     <div>
                       <h4>QR Payment</h4>
-                      <div className={styles.qrCodeImage}>
+                      <div 
+                        className={styles.qrCodeImage} 
+                        onClick={() => setShowQRPreview(true)}
+                        style={{ cursor: 'pointer', position: 'relative' }}
+                      >
                         <Image
                           src="/images/tngo_qrcode.jpg"
                           alt="DuitNow QR Code for Sharon Spa Enterprise"
@@ -180,9 +187,35 @@ export default function ContactSection() {
                             borderRadius: '8px',
                           }}
                         />
+                        <div 
+                          style={{
+                            position: 'absolute',
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            background: 'rgba(0, 0, 0, 0.7)',
+                            color: 'white',
+                            width: '40px',
+                            height: '40px',
+                            borderRadius: '50%',
+                            opacity: 0,
+                            transition: 'opacity 0.3s ease',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          }}
+                          className={styles.zoomIcon}
+                        >
+                          <MdZoomIn size={24} />
+                        </div>
                       </div>
                       <p>
                         <small>Scan to pay via DuitNow</small>
+                      </p>
+                      <p>
+                        <small style={{ cursor: 'pointer', textDecoration: 'underline' }} onClick={() => setShowQRPreview(true)}>
+                          Click to enlarge
+                        </small>
                       </p>
                     </div>
                   </div>
@@ -430,6 +463,15 @@ export default function ContactSection() {
             </div>
           </div>
         </Modal>
+
+        {/* QR Code Preview Modal */}
+        <ImagePreviewModal
+          isOpen={showQRPreview}
+          onClose={() => setShowQRPreview(false)}
+          src="/images/tngo_qrcode.jpg"
+          alt="DuitNow QR Code for Sharon Spa Enterprise"
+          title="Scan QR Code to Pay"
+        />
       </div>
     </section>
   )

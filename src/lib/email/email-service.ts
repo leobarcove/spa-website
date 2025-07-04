@@ -240,7 +240,7 @@ export function generateBookingConfirmationEmail(
             </div>
             
             <div class="cta-section">
-                <a href="https://sharonspa.my/booking" class="cta-button">Manage Your Booking</a>
+                <a href="https://sharon-spa.com/booking" class="cta-button">Manage Your Booking</a>
             </div>
             
             <div class="info-section">
@@ -252,7 +252,7 @@ export function generateBookingConfirmationEmail(
         <div class="footer">
             <p><strong>Sharon Spa</strong></p>
             <p>📍 181 Tingkat 1, Lot B, Lebuh Melaka, 10400 Georgetown, Pulau Pinang</p>
-            <p>📞 601112914118 | ✉️ <a href="mailto:info@sharonsparelax.my">info@sharonsparelax.my</a></p>
+            <p>📞 601112914118 | ✉️ <a href="mailto:info@sharon-spa.comnfo@shasharon-spa.comp>
             <p style="margin-top: 20px; font-size: 12px; color: #999;">
                 This email was sent to ${
                   booking.customerEmail
@@ -392,7 +392,7 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
             </div>
             
             <div class="cta-section">
-                <a href="https://sharonspa.my/booking" class="cta-button">Confirm Attendance</a>
+                <a href="https://sharon-spa.com/booking" class="cta-button">Confirm Attendance</a>
                 <a href="tel:601112914118" class="cta-button secondary">Call to Reschedule</a>
             </div>
             
@@ -410,7 +410,7 @@ export function generateBookingReminderEmail(booking: BookingDetails): string {
         <div class="footer">
             <p><strong>Sharon Spa</strong></p>
             <p>📍 181 Tingkat 1, Lot B, Lebuh Melaka, 10400 Georgetown, Pulau Pinang</p>
-            <p>📞 601112914118 | ✉️ <a href="mailto:info@sharonsparelax.my">info@sharonsparelax.my</a></p>
+            <p>📞 601112914118 | ✉️ <a href="mailto:info@sharon-spa.comnfo@shasharon-spa.comp>
         </div>
     </div>
 </body>
@@ -431,7 +431,7 @@ export async function sendEmail(
   console.log('Email would be sent:', {
     to: options.to,
     subject: options.subject,
-    from: options.from || 'noreply@sharonspa.my',
+    from: options.from || 'noreply@sharon-spa.com',
   })
 
   // Mock successful response
@@ -446,7 +446,7 @@ export async function sendBookingConfirmation(booking: BookingDetails) {
     to: booking.customerEmail,
     subject: `Booking Confirmation #${booking.bookingId} - Sharon Spa`,
     html,
-    from: 'bookings@sharonspa.my',
+    from: 'bookings@sharon-spa.com',
   })
 }
 
@@ -458,6 +458,6 @@ export async function sendBookingReminder(booking: BookingDetails) {
     to: booking.customerEmail,
     subject: `Appointment Reminder - ${booking.date} at ${booking.time}`,
     html,
-    from: 'reminders@sharonspa.my',
+    from: 'reminders@sharon-spa.com',
   })
 }

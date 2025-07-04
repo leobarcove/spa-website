@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'Shopping Cart | Sharon Spa',
     description: 'Review your selected spa products and proceed to checkout.',
-    url: 'https://sharonspa.my/cart',
+    url: 'https://sharon-spa.com/cart',
     siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',

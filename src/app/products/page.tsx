@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Spa Products | Sharon Spa | Premium Oils & Wellness',
     description:
       'Discover our premium collection of spa products including castor massage oil, aromatherapy oils, and wellness products.',
-    url: 'https://sharonspa.my/products',
+    url: 'https://sharon-spa.com/products',
     siteName: 'Sharon Spa',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://sharonspa.my/products',
+    canonical: 'https://sharon-spa.com/products',
   },
   robots: {
     index: true,

@@ -158,11 +158,29 @@
     display: flex;
     justify-content: center;
     margin: var(--space-3) 0;
+    position: relative;
+    cursor: pointer;
     
     img {
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-md);
+      }
+
+      .zoomIcon {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .zoomIcon {
+    pointer-events: none;
   }
 
   p {

@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Spa Services | Traditional Malaysian Massage & Wellness Treatments',
     description:
       'Discover our luxury spa services including traditional Malaysian massage, aromatherapy, hot stone therapy, and royal wellness rituals.',
-    url: 'https://sharonspa.my/services',
+    url: 'https://sharon-spa.com/services',
     siteName: 'Sharon Spa',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://sharonspa.my/services',
+    canonical: 'https://sharon-spa.com/services',
   },
   robots: {
     index: true,

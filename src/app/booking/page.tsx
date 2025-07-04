@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Book Appointment | Sharon Spa',
     description:
       'Book your luxury spa treatment online. Choose from our premium services and schedule your perfect wellness experience.',
-    url: 'https://sharonspa.my/booking',
+    url: 'https://sharon-spa.com/booking',
     siteName: 'Sharon Spa',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://sharonspa.my/booking',
+    canonical: 'https://sharon-spa.com/booking',
   },
   robots: {
     index: true,

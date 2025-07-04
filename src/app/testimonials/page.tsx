@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Client Testimonials | Sharon Spa',
     description:
       'Read what our valued clients say about their Sharon Spa experience. Discover authentic reviews and testimonials.',
-    url: 'https://sharonspa.my/testimonials',
+    url: 'https://sharon-spa.com/testimonials',
     siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',
@@ -24,7 +24,7 @@ export const metadata = {
       'Read what our valued clients say about their Sharon Spa experience.',
   },
   alternates: {
-    canonical: 'https://sharonspa.my/testimonials',
+    canonical: 'https://sharon-spa.com/testimonials',
   },
   robots: {
     index: true,

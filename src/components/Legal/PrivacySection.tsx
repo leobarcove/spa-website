@@ -217,8 +217,8 @@ export default function PrivacySection() {
               </p>
               <p>📍 Georgetown, Pulau Pinang</p>
               <p>📞 601112914118</p>
-              <p>✉️ privacy@sharonspa.my</p>
-              <p>✉️ info@sharonspa.my</p>
+              <p>✉️ privacy@sharon-spa.com</p>
+              <p>✉️ info@sharon-spa.com</p>
             </div>
           </section>
 

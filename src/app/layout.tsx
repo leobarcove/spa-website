@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_MY',
-    url: 'https://sharonsparelax.my',
+    url: 'https://sharon-spa.com',
     siteName: 'Sharon Spa',
     title: 'Sharon Spa | Luxury Wellness & Beauty Treatments in Penang',
     description:
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://sharonspa.my',
+    canonical: 'https://sharon-spa.com',
   },
 }
 
@@ -100,7 +100,7 @@ export default function RootLayout({
               alternateName: 'Sharon Spa Penang',
               description:
                 "Penang's premier luxury spa offering traditional healing treatments, aromatherapy, and wellness services in Georgetown.",
-              url: 'https://sharonspa.my',
+              url: 'https://sharon-spa.com',
               logo: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80',
               image: [
                 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
@@ -108,7 +108,7 @@ export default function RootLayout({
                 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80',
               ],
               telephone: '601112914118',
-              email: 'info@sharonspa.my',
+              email: 'info@sharon-spa.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '181 Tingkat 1, Lot B, Lebuh Melaka',

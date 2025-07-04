@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Terms & Conditions | Sharon Spa',
     description:
       'Read the terms and conditions for using Sharon Spa services. Understand our booking policies, cancellation terms, and service guidelines.',
-    url: 'https://sharonspa.my/terms',
+    url: 'https://sharon-spa.com/terms',
     siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata = {
     description: 'Read the terms and conditions for using Sharon Spa services.',
   },
   alternates: {
-    canonical: 'https://sharonspa.my/terms',
+    canonical: 'https://sharon-spa.com/terms',
   },
   robots: {
     index: true,

@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Contact Us | Sharon Spa | Location & Booking Info',
     description:
       'Contact Sharon Spa in Georgetown, Penang. Find our location, business hours, phone number, and booking information.',
-    url: 'https://sharonspa.my/contact',
+    url: 'https://sharon-spa.com/contact',
     siteName: 'Sharon Spa',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://sharonspa.my/contact',
+    canonical: 'https://sharon-spa.com/contact',
   },
   robots: {
     index: true,

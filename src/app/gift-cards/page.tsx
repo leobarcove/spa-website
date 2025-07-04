@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Spa Gift Cards | Sharon Spa',
     description:
       'Give the gift of relaxation with Sharon Spa gift cards. Perfect for any special occasion.',
-    url: 'https://sharonspa.my/gift-cards',
+    url: 'https://sharon-spa.com/gift-cards',
     siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata = {
     description: 'Give the gift of relaxation with Sharon Spa gift cards.',
   },
   alternates: {
-    canonical: 'https://sharonspa.my/gift-cards',
+    canonical: 'https://sharon-spa.com/gift-cards',
   },
   robots: {
     index: true,

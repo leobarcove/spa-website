@@ -12,7 +12,7 @@ export const metadata = {
     title: 'Privacy Policy | Sharon Spa',
     description:
       'Learn how Sharon Spa protects your privacy and personal data. Read our comprehensive privacy policy.',
-    url: 'https://sharonspa.my/privacy',
+    url: 'https://sharon-spa.com/privacy',
     siteName: 'Sharon Spa',
     locale: 'en_MY',
     type: 'website',
@@ -24,7 +24,7 @@ export const metadata = {
       'Learn how Sharon Spa protects your privacy and personal data.',
   },
   alternates: {
-    canonical: 'https://sharonspa.my/privacy',
+    canonical: 'https://sharon-spa.com/privacy',
   },
   robots: {
     index: true,
