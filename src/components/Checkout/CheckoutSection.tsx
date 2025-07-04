@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { MdContentCopy, MdCheckCircle, MdInfo, MdTimer } from 'react-icons/md'
+import { MdContentCopy, MdCheckCircle, MdInfo, MdTimer, MdQrCode } from 'react-icons/md'
+import Image from 'next/image'
 import { useCart } from '@/contexts/CartContext'
 import styles from './CheckoutSection.module.scss'
 
@@ -10,14 +11,12 @@ interface BankDetails {
   bankName: string
   accountName: string
   accountNumber: string
-  swiftCode: string
 }
 
 const bankDetails: BankDetails = {
-  bankName: 'Maybank',
+  bankName: 'OCBC Bank',
   accountName: 'Sharon Spa Relax Enterprise',
-  accountNumber: '512345678901',
-  swiftCode: 'MBBEMYKL',
+  accountNumber: '701-1-54321',
 }
 
 export default function CheckoutSection() {
@@ -140,7 +139,7 @@ export default function CheckoutSection() {
             <div className={styles.paymentMethod}>
               <h3>Bank Transfer Details</h3>
               <p className={styles.instruction}>
-                Please transfer the exact amount to the following bank account:
+                Please transfer the exact amount to the following OCBC bank account:
               </p>
 
               <div className={styles.bankDetails}>
@@ -205,26 +204,6 @@ export default function CheckoutSection() {
                   </div>
                 </div>
 
-                <div className={styles.detailRow}>
-                  <span className={styles.label}>SWIFT Code:</span>
-                  <div className={styles.valueGroup}>
-                    <span className={styles.value}>
-                      {bankDetails.swiftCode}
-                    </span>
-                    <button
-                      className={styles.copyBtn}
-                      onClick={() =>
-                        copyToClipboard(bankDetails.swiftCode, 'swift')
-                      }
-                    >
-                      {copiedField === 'swift' ? (
-                        <MdCheckCircle />
-                      ) : (
-                        <MdContentCopy />
-                      )}
-                    </button>
-                  </div>
-                </div>
 
                 <div className={styles.detailRow}>
                   <span className={styles.label}>Amount to Pay:</span>
@@ -262,6 +241,20 @@ export default function CheckoutSection() {
                       )}
                     </button>
                   </div>
+                </div>
+              </div>
+
+              <div className={styles.qrCodeSection}>
+                <h4><MdQrCode /> Quick Payment via QR Code</h4>
+                <p>Scan the QR code below for quick payment:</p>
+                <div className={styles.qrCodeContainer}>
+                  <Image
+                    src="/images/tngo_qrcode.jpg"
+                    alt="OCBC Payment QR Code"
+                    width={200}
+                    height={200}
+                    priority
+                  />
                 </div>
               </div>
 
