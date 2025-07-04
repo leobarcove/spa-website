@@ -490,20 +490,8 @@
   }
 
   .continueBtn {
+    @include button-secondary;
     flex: 1;
-    background: white;
-    color: #6b7280;
-    border: 2px solid #e5e7eb;
-    padding: 14px 20px;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      border-color: #c9a961;
-      color: #c9a961;
-    }
   }
 }
 

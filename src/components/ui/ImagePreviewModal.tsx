@@ -20,7 +20,7 @@ export default function ImagePreviewModal({
   alt,
   title,
 }: ImagePreviewModalProps) {
-  const [zoom, setZoom] = useState(1.2)
+  const [zoom, setZoom] = useState(1)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isDragging, setIsDragging] = useState(false)
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
@@ -47,7 +47,7 @@ export default function ImagePreviewModal({
       document.addEventListener('keydown', handleKeyboard)
       document.body.style.overflow = 'hidden'
       // Reset zoom and position when modal opens
-      setZoom(1.2)
+      setZoom(1)
       setPosition({ x: 0, y: 0 })
     }
 
@@ -58,11 +58,11 @@ export default function ImagePreviewModal({
   }, [isOpen, onClose])
 
   const handleZoomIn = () => {
-    setZoom(prev => Math.min(prev + zoomStep, maxZoom))
+    setZoom((prev) => Math.min(prev + zoomStep, maxZoom))
   }
 
   const handleZoomOut = () => {
-    setZoom(prev => Math.max(prev - zoomStep, minZoom))
+    setZoom((prev) => Math.max(prev - zoomStep, minZoom))
   }
 
   const handleResetZoom = () => {
@@ -75,7 +75,7 @@ export default function ImagePreviewModal({
       setIsDragging(true)
       setDragStart({
         x: e.clientX - position.x,
-        y: e.clientY - position.y
+        y: e.clientY - position.y,
       })
     }
   }
@@ -84,7 +84,7 @@ export default function ImagePreviewModal({
     if (isDragging && zoom > 1) {
       setPosition({
         x: e.clientX - dragStart.x,
-        y: e.clientY - dragStart.y
+        y: e.clientY - dragStart.y,
       })
     }
   }
@@ -96,7 +96,7 @@ export default function ImagePreviewModal({
   const handleWheel = (e: React.WheelEvent) => {
     e.preventDefault()
     const delta = e.deltaY > 0 ? -zoomStep : zoomStep
-    setZoom(prev => Math.max(minZoom, Math.min(maxZoom, prev + delta)))
+    setZoom((prev) => Math.max(minZoom, Math.min(maxZoom, prev + delta)))
   }
 
   if (!isOpen) return null
@@ -111,7 +111,7 @@ export default function ImagePreviewModal({
         >
           <MdClose />
         </button>
-        
+
         {/* Zoom Controls */}
         <div className={styles.zoomControls}>
           <button
@@ -144,7 +144,7 @@ export default function ImagePreviewModal({
         </div>
 
         {title && <h3 className={styles.title}>{title}</h3>}
-        <div 
+        <div
           ref={imageContainerRef}
           className={styles.imageContainer}
           onMouseDown={handleMouseDown}
@@ -153,7 +153,7 @@ export default function ImagePreviewModal({
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
           style={{
-            cursor: zoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default'
+            cursor: zoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
           }}
         >
           <div

@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     service: 'Traditional Malaysian Massage',
     comment:
       'Outstanding service from start to finish. The traditional massage was expertly performed and really helped with my back tension. The facilities are world-class and the staff is incredibly professional.',
-    avatar: '/images/avatars/asian-man-2.jpg',
+    avatar: '/images/avatars/ahmad-rahman.jpg',
     verified: true,
   },
   {
